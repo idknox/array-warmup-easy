@@ -3,35 +3,63 @@ require_relative "testing_library"
 dogs = ["Fido", "Harleigh", "Mali", "Trixie", "Snow", "Victory"]
 
 def how_many_dogs(dogs)
-
+  return dogs.length
 end
 
 def name_lengths(dogs)
-
+  name_lengths=[]
+  dogs.each do |dog|
+    name_lengths.push(dog.length)
+  end
+  return name_lengths
 end
 
 def reverse_dog_names(dogs)
-
+  dog_reverse=[]
+  dogs.each do |dog|
+    dog_reverse.push(dog.reverse)
+  end
+  return dog_reverse
 end
 
 def first_three_dogs_with_each(dogs)
-
+  new_array=[]
+  (0..2).each do |num|
+    new_array.push(dogs[num])
+  end
+  return new_array
 end
 
 def first_three_dogs_without_each(dogs)
-
+  return dogs[0..2]
 end
 
 def reverse_case_dog_names(dogs)
-
+  new_array=[]
+  dogs.each do |dog|
+    new_array.push(dog.swapcase)
+  end
+  return new_array
 end
 
 def sum_of_all_dog_name_lengths(dogs)
-
+  sum = 0
+  dogs.each do |dog|
+    sum += dog.length
+  end
+  return sum
 end
 
 def dogs_with_long_names(dogs)
-
+  new_array=[]
+  dogs.each do |dog|
+    if dog.length > 4
+      new_array.push(true)
+    else
+      new_array.push(false)
+    end
+  end
+  return new_array
 end
 
 puts "*"*80
